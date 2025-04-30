@@ -1,0 +1,30 @@
+
+.container {
+  width: 1300px;
+  height: 450px;
+  text-align: center;
+  background-color: rgb(224, 131, 16);
+}
+
+.container-fluid {
+  background-color: yellowgreen;
+}
+#h1,#h3 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: darkslateblue;
+}
+.img {
+  width: 0px;
+  height: 0px;
+}
+#l1 {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  bottom: 400px;
+  left: 150px;
+  
+}
+h5 {
+    color: darkred;
+}

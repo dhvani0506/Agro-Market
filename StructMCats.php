@@ -22,9 +22,9 @@ if (isset($_SESSION['Admin_ID']) && isset($_SESSION['Admin_email'])) {
         <?php
         include 'Header.php';
         ?>
-        <div class="content_wrapper" style="background-color: white;">
+        <div class="content_wrapper" style="background-color: white;" >
             <?php
-            include 'Content.php';
+            include 'ManageCats.php';
             include 'Sidebar.php';
             include 'Footer.php';
             ?>

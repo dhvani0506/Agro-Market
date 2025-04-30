@@ -1,7 +1,7 @@
 <?php
 session_start();
 include 'connection.php';
-if (isset($_SESSION['Admin_ID']) && isset($_SESSION['Admin_email'])) {
+if (isset($_SESSION['cust_id']) && isset($_SESSION['cust_email'])) {
 ?>
 
     <!DOCTYPE html>
@@ -13,7 +13,7 @@ if (isset($_SESSION['Admin_ID']) && isset($_SESSION['Admin_email'])) {
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
         <link rel="stylesheet" href="style.css" media="all" />
-        <title>Admin Panel</title>
+        <title>PROJECT</title>
     </head>
 
     <body>
@@ -22,9 +22,9 @@ if (isset($_SESSION['Admin_ID']) && isset($_SESSION['Admin_email'])) {
         <?php
         include 'Header.php';
         ?>
-        <div class="content_wrapper" style="background-color: white;">
+        <div class="content_wrapper" style=" background: white;">
             <?php
-            include 'Content.php';
+            include 'MyBids.php';
             include 'Sidebar.php';
             include 'Footer.php';
             ?>

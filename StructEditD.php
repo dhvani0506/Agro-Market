@@ -24,7 +24,7 @@ if (isset($_SESSION['Admin_ID']) && isset($_SESSION['Admin_email'])) {
         ?>
         <div class="content_wrapper" style="background-color: white;">
             <?php
-            include 'Content.php';
+            include 'EditDetails.php';
             include 'Sidebar.php';
             include 'Footer.php';
             ?>

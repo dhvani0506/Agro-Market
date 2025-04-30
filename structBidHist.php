@@ -13,7 +13,7 @@ if (isset($_SESSION['Admin_ID']) && isset($_SESSION['Admin_email'])) {
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
         <link rel="stylesheet" href="style.css" media="all" />
-        <title>Admin Panel</title>
+        <title>Admin</title>
     </head>
 
     <body>
@@ -24,10 +24,11 @@ if (isset($_SESSION['Admin_ID']) && isset($_SESSION['Admin_email'])) {
         ?>
         <div class="content_wrapper" style="background-color: white;">
             <?php
-            include 'Content.php';
+            include 'BidHistory.php';
             include 'Sidebar.php';
             include 'Footer.php';
             ?>
+
         </div>
 
 

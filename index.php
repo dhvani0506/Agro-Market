@@ -1,157 +1,82 @@
 <?php
-@include 'connection.php';
 session_start();
-
-$user_id = $_SESSION['user_id'];
-
-if(!isset($user_id)){
-   header('location:login.php');
-};
-
-if(isset($_GET['logout'])){
-   unset($user_id);
-   session_destroy();
-   header('location:login.php');
-};
-
-
-
-
-$query = mysqli_query($conn, "SELECT * FROM `user_form` WHERE `id` = '$user_id'");
-$fetch = mysqli_fetch_array($query);
-$row = mysqli_num_rows($query);
+include 'connection.php';
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Code For Font awesome cdn-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Code For Linking CSS-->
-    <link rel="stylesheet" href="style.css">
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
-
-    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src='login.js'></script>
+    <link rel="stylesheet" href="login.css" media="all" />
+    <title>Admin Login</title>
 </head>
+
 <body>
-    <!--Header-->
-    <?php
-        include_once 'header.php';
-    ?>
-    <!--Header-->
 
-    <!--Home-->
-        <section class="home" id="home">
-            <div class="content">
-                <h3>Fresh And <span>Organic</span> Organic Products For You</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet excepturi ipsa molestias sint. Soluta ad dicta tempora similique deleniti deserunt.</p>
-                <p>Hello <?php echo $fetch['name']; ?></p>
-                <a href="logout.php" class="btn">LogOut</a>
-            </div>
-        </section>
-    <!--Home-->
-    
-    <!-- Feature-->
-        <section class="feature" id="feature">
-            <h1 class="heading">Our<span>Features</span></h1>
+    <div class="container-fluid" style="background-color: white;">
+        <h1 id=h1 style="text-align:center; "><u>ADMIN'S CORNER</u></h1>
+        <hr>
+    </div>
 
-            <div class="box-container">
-                <div class="box">
-                    <img src="img/logo2.jpg"/>
-                    <h3>Fresh And Organic</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, aut?</p>
-                    <a href="#" class="btn">Read More</a>
-                </div>
+    <div class="container" style="background-color: white;">
 
-                <div class="box">
-                    <img src="img/logo2.jpg"/>
-                    <h3>Fresh And Organic</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, aut?</p>
-                    <a href="#" class="btn">Read More</a>
-                </div>
+        <h3 id=h3 style="text-align:center;"><u>Admin Login</u></h3>
 
-                <div class="box">
-                    <img src="img/logo2.jpg"/>
-                    <h3>Fresh And Organic</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, aut?</p>
-                    <a href="#" class="btn">Read More</a>
-                </div>
-            </div>
-        </section>
-    <!--Feature-->
-    
-    <!--Product-->
-    <?php
-        include_once 'productupload.php';
-    ?>
-    <!--Product-->
+        <form id="log" action="#" method="POST">
+            <?php if (isset($_GET['error'])) { ?>
+                <p class="error"><?php echo $_GET['error']; ?></p>
+            <?php } ?>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Admin Email:</b>&nbsp;<input type="text" name="Admin_email" placeholder="Name" required>
+            <br>
+            <b>Admin Password:</b>&nbsp;<input type="password" name="pass" placeholder="Password" required>
+            <br>
+            <br>
+            <input class="btn-primary" type="submit" id="login" name="login" value="Login">
+        </form>
 
 
-    <!--Blogs-->
-    
-    <!--Blogs-->
+        <h5 style="font-size: 20px; float:right;"><u>Don't have an account?<a href="admin_register.php">Create Here</a></u></h5>
+        <br>
 
-    <!--footer-->
-    <!-- <section class="footer">
-        <div class="box-container">
-            <div class="box">
-                <img src="img/logo2.jpg"/>
-                <p>Lorem ipsum dolor sit amet consectetur ad Porro, deserunt.</p>
-                <div class="share">
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-instagram"></i></a>
-                    <a href="#"><i class="fa fa-whatsapp"></i></a>
-                </div>
-            </div>
+    </div>
+    <div class="img">
+        <img src="logo-removebg-preview.png" alt="" id="l1">
+    </div>
 
-            <div class="box">
-                <h3>Contact Info</h3>
-                <a href="#" class="link"><i class="fa fa-phone"></i> +1234567890</a>
-                <a href="#" class="link"><i class="fa fa-phone"></i> +1234567890</a>
-                <a href="#" class="link"><i class="fa fa-envelope"></i> abc@gamil.com</a>
-                <a href="#" class="link"><i class="fa fa-map-marker"></i> Gujarat,India</a>
-            </div>
-
-            <div class="box">
-                <h3>Quick Links</h3>
-                <div class="links">
-                    <a href="index.html" class="link"><i class="fa fa-arrow-right"></i>Home</a>
-
-                    <a href="#" class="link"><i class="fa fa-arrow-right"></i>About Us</a>
-
-                    <a href="products.html" class="link"><i class="fa fa-arrow-right"></i>Products</a>
-
-                    <a href="blogs.html" class="link"><i class="fa fa-arrow-right"></i>Blogs</a>
-                    
-                    <a href="#" class="link"><i class="fa fa-arrow-right"></i>Contact Us</a>
-                </div>
-            </div>
-
-            <div class="box">
-                <h3>News Letter</h3>
-                <p>Suscribe For Latest Update</p>
-                <input type="email" placeholder="Your Email" class="email"/>
-                <input type="submit" value="Suscribe" class="btn"/>
-            </div>
-        </div>
-    </section> -->
-    <!--footer -->
-    
-    <?php
-        include_once 'footer.php';
-    ?>    
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-
-
-    <script src="js/script.js"></script>
-    <script src="js/filterproduct.js"></script>
-
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
+
 </html>
+
+<?php
+
+if (isset($_POST['login'])) {
+
+    $name = $_POST['Admin_email'];
+    $pass = $_POST['pass'];
+
+
+    $adlog = "SELECT * FROM admin_db WHERE Admin_email = '$name' AND Admin_Pass = '$pass' ";
+
+    $adresult = mysqli_query($conn, $adlog);
+
+    if (mysqli_num_rows($adresult) === 1) {
+        $row = mysqli_fetch_assoc($adresult);
+        if ($row['Admin_email'] === $name && $row['Admin_Pass'] === $pass) {
+            $_SESSION['Admin_email'] = $row['Admin_email'];
+            $_SESSION['Admin_ID'] = $row['Admin_ID'];
+            header("Location: home.php");
+            exit();
+        }
+    } else {
+        header("Location: index.php?error=Incorect Admin Email or Password");
+        exit();
+    }
+}
+?>
