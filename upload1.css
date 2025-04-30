@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+:root{
+    --green: green;
+    --black: #130f40;
+    --Light-color: #666;
+    --box-shadow: 0. 5rem 1.5rem rgba(0,0,0,.1);
+    --border: .2rem solid rgba(0,0,0.1);
+    --outline:.1rem solid rgba(0,0,0.1);
+}
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+body{
+    background: #eee;
+}
+
+
+#upload-container{
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    background-color: #fff;
+    border-radius: 10px;
+}
+#upload-container form{
+    display: flex;
+    flex-direction: column;
+}
+
+#upload-container form input{
+    /* padding: 8px;
+    outline: none;
+    border: 1px solid var(--black);
+    margin-bottom: 8px; */
+    width: 100%;
+    padding:15px 20px;
+    font-size: 17px;
+    margin:8px 0;
+    background: #eee;
+    border-radius: 5px;
+}
+#upload-container form button{
+    margin-top: 1rem;
+    display: inline-block;
+    padding:15px 20px;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    /* border: .2rem solid var(--black); */
+    color: var(--black);
+    cursor: pointer;
+    background: #eee;
+}
+
+#upload-container form button:hover{
+    background: var(--green);
+    color: #fff;
+}
+    
+#upload-container form input[type="submit"]{
+    /* background-color: var(--Light-color);
+    border: none; */
+    margin-top: 1rem;
+    display: inline-block;
+    padding:15px 20px;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    border: .2rem solid var(--black);
+    color: var(--black);
+    cursor: pointer;
+    background: none;
+}
+#upload-container form input[type="submit"]:hover{
+    background: var(--green);
+    color: #fff;
+}
+
+

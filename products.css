@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+:root{
+    --green: green;
+    --black: #130f40;
+    --Light-color: #666;
+    --box-shadow: 0. 5rem 1.5rem rgba(0,0,0,.1);
+    --border: 2rem solid rgba(0,0,0.1);
+    --outline:.1rem solid rgba(0,0,0.1);
+}
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+body{
+    background: #eee;
+}
+section{
+    padding: 2rem 9%;
+}
+
+.heading1{
+    padding-top: 7rem;
+}
+.heading{
+    text-align: center;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+    font-size: 3.5rem;
+    color: var(--black);
+}
+.heading span{
+    background: var(--green);
+    color: #fff;
+    display: inline-block;
+    padding: .5rem 3rem ;
+    /* clip-path: polygon(100% 0%,93% 50%,100% 99%,0% 100%,7% 50%,0% 0%); */
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+
+
+
+
+
+.feature{
+    padding-top: 20rem;
+}
+
+.filter-menu{
+    text-align: center;
+    padding: 0rem 9%;
+    padding-bottom: 3rem;
+}
+.feature .filter-btns .filter-btn{
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin: 0 1rem;
+    color: var(--black);
+    padding: 2rem ;
+
+    text-align: center;
+    /* padding: 2rem 0; */
+    /* padding-bottom: 3rem; */
+}
+.feature .filter-btns .filter-btn:hover{
+    color: var(--green);
+}
+
+
+
+.active-btn{
+    color: #555;
+}
+.active-btn::after{
+    width: 100%;
+}
+
+
+
+
+.feature .filter-items{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+    gap: 1.5rem; 
+}
+.feature .filter-items .filter-item{
+    padding: 3rem 2rem;
+    background: #fff;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+}
+.feature .filter-items .filter-item:hover{
+    box-shadow: 2px 2px 10px 4px var(--green);
+}
+.feature .filter-items .filter-item img{
+    margin: 1rem 0;
+    height: 15rem;
+}
+.feature .filter-items .filter-item h3{
+    font-size: 2.5rem;
+    line-height: 1.8;
+    color: var(--black);
+}
+.feature .filter-items .filter-item p{
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: var(--Light-color);
+    padding: 1rem 0;
+}
+/* .header .navbar.active{
+    right: 2rem;
+    transition: .3s all;
+} */
+
+
+
+
+.filter-items{
+    padding: 1rem;
+}
+.filter-items:first-child{
+    margin-bottom: 2rem;
+}
+.filter-items .filter-item{
+    background: #fff;
+    border-radius: .5rem;
+    text-align: center;
+    padding: 3rem 2rem;
+    box-shadow: var(--box-shadow);
+    transition: .2s linear;
+}
+.filter-items .filter-item:hover{
+    box-shadow: 2px 2px 10px 4px var(--green);
+}
+.filter-items .filter-item img{
+    height: 15rem;
+}
+.filter-items .filter-item h1{
+    font-size: 2.5rem;
+    color: var(--black);
+}
+.filter-items .filter-item .price{
+    font-size: 2rem;
+    color: var(--Light-color);
+    padding: .5rem 0;
+}
+.filter-items .filter-item .stars i{
+    font-size: 1.7rem;
+    color: orange;
+    padding: .5rem 0;
+
+}
+
+
+

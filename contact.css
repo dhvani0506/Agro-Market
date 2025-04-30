@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+:root{
+   --blue:#2980b9;
+   --orange:orange;
+   --black:#333;
+   --white:#fff;
+   --bg-color:#eee;
+   --dark-bg:rgba(0,0,0,.7);
+   --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+   --border:.1rem solid #999;
+   --green: green;
+    --black: #130f40;
+    --Light-color: #666;
+    --box-shadow: 0. 5rem 1.5rem rgba(0,0,0,.1);
+    --border: .2rem solid rgba(0,0,0.1);
+    --outline:.1rem solid rgba(0,0,0.1);
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body
+{
+  background: linear-gradient(90deg,rgb(236, 240, 236) 0%,rgb(207, 245, 207) 30% ,rgb(152, 243, 152) 30% ,rgb(94, 245, 94) 100%);
+}
+
+.contactUs
+{
+  position: relative;
+  width: 100%;
+  padding: 40px 100px;
+}
+
+.contactUs .title
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+}
+
+.contactUs .title h2
+{
+  color: black;
+  font-weight: 400;
+}
+
+.form
+{
+  grid-area: form;
+}
+
+.info
+{
+  grid-area: info;
+}
+.map
+{
+  grid-area: map;
+}
+
+.contact
+{
+  padding: 40px;
+  background: #fff;
+  box-shadow: 0 5px 35px rgba(0,0,0,0.15);
+}
+
+.box1
+{
+  display: flex;
+  position: relative;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 5fr 4fr;
+  grid-template-areas: 
+  "form info"
+  "form map";
+  grid-gap: 20px;
+  margin-top: 20px;
+}
+
+.contact h3
+{
+  color: blueviolet;
+  font-weight: 500;
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+
+.formbox
+{
+  position: relative;
+  width: 100%;
+}
+
+.formbox .row50
+{
+  display: flex;
+  gap: 20px;
+}
+
+.inputbox
+{
+  display: flex;
+  flex-direction:column ;
+  margin-bottom: 10px;
+  width: 50%;
+}
+
+.formbox .row100 .inputbox
+{
+  width: 100%;
+  display: flex;
+}
+
+.inputbox span
+{
+  color: black;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.inputbox input
+{
+  padding: 10px;
+  font-size: 1.1em;
+  outline: none;
+  border: 1px solid #333;
+}
+
+.inputbox textarea
+{
+  padding: 10px;
+  font-size: 1.1em;
+  outline: none;
+  border: 1px solid #333;
+  resize: none;
+  min-height: 220px;
+  margin-bottom: 10px
+}
+
+.inputbox input[type=submit]
+{
+  background: green;
+  color: #fff;
+  border: none;
+  max-width: 120px;
+  font-size: 1.1em;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 14px 15px;
+}
+
+.inputbox ::placeholder
+{
+  color: black;
+}
+
+/* info */
+.info
+{
+  background: rgb(213, 241, 210);
+}
+
+.info h3
+{
+  color: #fff;
+}
+
+.info .infobox div
+{
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.info .infobox div span
+{
+  min-width: 40px;
+  height: 40px;
+  color: #fff;
+  background: rgb(28, 253, 3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+ 
+.info .infobox div p
+{
+ color: #fff;
+ font-size: 1.1e,; 
+}
+
+.info .infobox div a
+{
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+.sco
+{
+  margin-top: 40px;
+  display: flex;
+}
+
+.sco li
+{
+  list-style: none;
+  margin-right: 15px;
+}
+
+.sco li a 
+{
+  color: #ffffff;
+  font-size: 2em;
+  color: rgb(28, 253, 3);
+}
+
+.sci li a :hover
+{
+  color: green;
+}
+
+.map
+{
+  padding: 0;
+}
+
+.map iframe
+{
+  width: 100%;
+  height: 100%;
+}
